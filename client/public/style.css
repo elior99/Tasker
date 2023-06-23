@@ -1,0 +1,84 @@
+.thumb-sm {
+    height: 36px;
+    width: 36px;
+}
+.card-box {
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: #ebebeb solid 1px;
+}
+
+.priorityBox {
+    margin: 20px 20px;
+    width: 35px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.taskList:hover{
+     transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  border-radius: 10px;
+  cursor:pointer
+}
+
+.taskList li {
+    background-color: #fff;
+    border: 1px solid rgba(121, 121, 121, .2);
+   /* padding: 10px;*/
+    margin-bottom: 20px;
+    border-radius: 10px
+}
+
+.filterSelect {
+    width: 70%;
+    display: inline-block;
+
+}
+
+.filterBar {
+        background-color: #f7fcff;
+    border-radius: 20px;
+    border: 1px solid #dbdbdb;
+        margin-bottom: 30px;
+}
+
+.dueDate {
+    border-radius: 8px 8px 0px 0px;
+    background-color: #d9efff;
+    color: #005797;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 4px;
+    margin:0;
+}
+
+.taskList li:last-of-type {
+    margin-bottom: 0
+}
+
+.taskList a {
+    font-size: 13px
+}
+
+.taskList .checkbox {
+    margin-left: 20px;
+    margin-top: 5px
+}
+.text-muted {
+    color: #98a6ad!important;
+}
+
+.gradient-custom {
+/* fallback for old browsers */
+background: #6a11cb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}

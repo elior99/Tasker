@@ -115,7 +115,7 @@ const filterData = () => {
         console.log(error.message);
       });
 
-    fetch("http://localhost:5000/users/employees")
+    fetch(process.env.REACT_APP_BACKEND_URL+"/users/employees")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -153,7 +153,7 @@ const filterData = () => {
   }
 
   const moveTask = (id) => {
-    fetch("http://localhost:5000/tasks/update/" + id)
+    fetch(process.env.REACT_APP_BACKEND_URL+"/tasks/update/" + id)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -171,7 +171,7 @@ const filterData = () => {
   };
 
     const deleteTask = (id) => {
-      fetch("http://localhost:5000/tasks/delete/" + id)
+      fetch(process.env.REACT_APP_BACKEND_URL+"/tasks/delete/" + id)
         .then((response) => {
           if (response.ok) {
             return response.json();

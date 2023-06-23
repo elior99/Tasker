@@ -102,7 +102,7 @@ function EmployeeTask() {
 
   useEffect(() => {
     // Make an HTTP request
-    fetch("http://localhost:5000/tasks/employee/" + getCookie.id)
+    fetch(process.env.REACT_APP_BACKEND_URL+ "/tasks/employee/" + getCookie.id)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -130,7 +130,7 @@ function EmployeeTask() {
         console.log(error.message);
       });
 
-    fetch("http://localhost:5000/users/managers")
+    fetch(process.env.REACT_APP_BACKEND_URL+"/users/managers")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -153,7 +153,7 @@ function EmployeeTask() {
   }
 
   const moveTask = (id) => {
-    fetch("http://localhost:5000/tasks/update/" + id)
+    fetch(process.env.REACT_APP_BACKEND_URL+"/tasks/update/" + id)
       .then((response) => {
         if (response.ok) {
           return response.json();

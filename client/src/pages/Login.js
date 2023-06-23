@@ -21,7 +21,7 @@ function Login(props) {
       password: passwordForm,
     };
 
-    fetch("http://localhost:5000/users/login", {
+    fetch(process.env.REACT_APP_BACKEND_URL+"/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

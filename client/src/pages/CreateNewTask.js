@@ -20,7 +20,7 @@ function CreateNewTask(props) {
 
   useEffect(() => {
     // Make an HTTP request
-    fetch("http://localhost:5000/users/employeesUnderManager/" + getCookie.id)
+    fetch(process.env.REACT_APP_BACKEND_URL + "/users/employeesUnderManager/" + getCookie.id)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -59,7 +59,7 @@ function CreateNewTask(props) {
       priority: selectedPriority,
     };
 
-    fetch("http://localhost:5000/tasks/add", {
+    fetch(process.env.REACT_APP_BACKEND_URL + "/tasks/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

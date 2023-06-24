@@ -8,7 +8,13 @@ require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+
+app.use(
+  cors({
+    origin: ['https://tasker-gamma.vercel.app'], // Add your frontend URLs here
+  })
+);
+
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;

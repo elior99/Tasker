@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: ['https://tasker-gamma.vercel.app'], // Add your frontend URLs here
+    origin: ["https://taskerweb.vercel.app/"], // Add your frontend URLs here
   })
 );
 

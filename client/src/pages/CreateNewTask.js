@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 import CookieController from "../components/controller/CookieController";
 
 function CreateNewTask(props) {
-  //  const [error, setError] = useState(null);
+
   const [startDate, setStartDate] = useState(new Date());
   const [employees, setEmployees] = useState([]);
   const [selectedEmployeeId, setSelectedEmployeeId] = useState(0);
@@ -38,13 +37,12 @@ function CreateNewTask(props) {
         }
       })
       .catch((error) => {
-        // Error occurred during the request
-        //  setError(error.message);
+        console.log(error.message);
       });
   }, []);
 
   const handleSubmit = (e) => {
-    // alert('A name was submitted: ' + this.state.value);
+
     e.preventDefault();
 
     const taskTitle = taskTitleRef.current.value;
@@ -104,7 +102,7 @@ function CreateNewTask(props) {
       <form className="mt-4" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="taskTitle" className="form-label">
-            Task Title
+            Title
           </label>
           <input
             type="text"
@@ -114,7 +112,7 @@ function CreateNewTask(props) {
           />
         </div>
         <div className="mb-3">
-          <label className="form-label">Task Description</label>
+          <label className="form-label">Description</label>
           <div className="form-floating">
             <textarea
               className="form-control"

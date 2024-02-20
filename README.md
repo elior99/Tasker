@@ -6,7 +6,7 @@ With Tasker, you can create tasks as a manager for your employees and they can m
 https://taskerweb.vercel.app/
 
 * Users: ofir,elior
-* Password: 123465
+* Password: 123456
 
 ## Features
 
